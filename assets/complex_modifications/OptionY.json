@@ -1,0 +1,39 @@
+{
+    "title": "Option+Y to Clipboard History",
+    "rules": [
+        {
+            "description": "Option+Yでクリップボード履歴を表示",
+            "manipulators": [
+                {
+                    "conditions": [
+                        {
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console",
+                                "Emacs"
+                            ],
+                            "type": "frontmost_application_unless"
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "left_shift",
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "y",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_option"
+                            ]
+                        }
+                    },
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}
