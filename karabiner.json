@@ -36,7 +36,7 @@
                         ]
                     },
                     {
-                        "description": "左右のシフトキーでIMEを切り替える",
+                        "description": "左右ShiftでIMEを切り替える",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -164,6 +164,76 @@
                                         "shell_command": "open ~"
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "右Option2回連打でアクティビティモニタを起動する",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "right_option_key",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Activity Monitor'"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "right_option_key",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "right_option_key",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "right_option"
+                                    }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "right_option_key",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "right_option_key",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]

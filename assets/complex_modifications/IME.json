@@ -67,7 +67,7 @@
             ]
         },
         {
-            "description": "左右のシフトキーでIMEを切り替える",
+            "description": "左右ShiftでIMEを切り替える",
             "manipulators": [
                 {
                     "type": "basic",
