@@ -25,8 +25,13 @@
                     "conditions": [
                         {
                             "bundle_identifiers": [
-                                "^com\\.parallels\\.desktop\\.console",
-                                "Emacs"
+                                "^org\\.gnu\\.Emacs$",
+                                "^org\\.gnu\\.AquamacsEmacs$",
+                                "^org\\.gnu\\.Aquamacs$",
+                                "^com\\.parallels\\.desktop$",
+                                "^com\\.parallels\\.vm$",
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.parallels\\.winapp\\."
                             ],
                             "type": "frontmost_application_unless"
                         }
@@ -59,7 +64,9 @@
                         {
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
-                                "Emacs"
+                                "^org\\.gnu\\.Emacs$",
+                                "^org\\.gnu\\.AquamacsEmacs$",
+                                "^org\\.gnu\\.Aquamacs$"
                             ]
                         }
                     ]
@@ -96,7 +103,13 @@
                     "conditions": [
                         {
                             "bundle_identifiers": [
-                                "^com\\.parallels\\.desktop\\.console"
+                                "^org\\.gnu\\.Emacs$",
+                                "^org\\.gnu\\.AquamacsEmacs$",
+                                "^org\\.gnu\\.Aquamacs$",
+                                "^com\\.parallels\\.desktop$",
+                                "^com\\.parallels\\.vm$",
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.parallels\\.winapp\\."
                             ],
                             "type": "frontmost_application_unless"
                         }
@@ -129,7 +142,13 @@
                     "conditions": [
                         {
                             "bundle_identifiers": [
-                                "^com\\.parallels\\.desktop\\.console"
+                                "^org\\.gnu\\.Emacs$",
+                                "^org\\.gnu\\.AquamacsEmacs$",
+                                "^org\\.gnu\\.Aquamacs$",
+                                "^com\\.parallels\\.desktop$",
+                                "^com\\.parallels\\.vm$",
+                                "^com\\.parallels\\.desktop\\.console$",
+                                "^com\\.parallels\\.winapp\\."
                             ],
                             "type": "frontmost_application_unless"
                         }

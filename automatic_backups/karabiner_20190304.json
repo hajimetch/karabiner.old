@@ -42,13 +42,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^org\\.gnu\\.AquamacsEmacs$",
-                                            "^org\\.gnu\\.Aquamacs$",
-                                            "^com\\.parallels\\.desktop$",
-                                            "^com\\.parallels\\.vm$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^com\\.parallels\\.winapp\\."
+                                            "^com\\.parallels\\.desktop\\.console"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -81,13 +75,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^org\\.gnu\\.AquamacsEmacs$",
-                                            "^org\\.gnu\\.Aquamacs$",
-                                            "^com\\.parallels\\.desktop$",
-                                            "^com\\.parallels\\.vm$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^com\\.parallels\\.winapp\\."
+                                            "^com\\.parallels\\.desktop\\.console"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
