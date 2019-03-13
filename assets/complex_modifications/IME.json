@@ -40,7 +40,62 @@
             ]
         },
         {
-            "description": "Control+`でLEIMを切り替える",
+            "description": "左右ShiftでIMEを切り替える",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "semicolon",
+                            "modifiers": [
+                                "left_control",
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_shift"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "j",
+                            "modifiers": [
+                                "left_control",
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Control+`でIMEを切り替える(Emacs)",
             "manipulators": [
                 {
                     "type": "basic",
@@ -68,89 +123,6 @@
                                 "^org\\.gnu\\.AquamacsEmacs$",
                                 "^org\\.gnu\\.Aquamacs$"
                             ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "左右ShiftでIMEを切り替える",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_shift",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_shift"
-                        }
-                    ],
-                    "to_if_alone": [
-                        {
-                            "key_code": "semicolon",
-                            "modifiers": [
-                                "left_control",
-                                "left_shift"
-                            ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "bundle_identifiers": [
-                                "^org\\.gnu\\.Emacs$",
-                                "^org\\.gnu\\.AquamacsEmacs$",
-                                "^org\\.gnu\\.Aquamacs$",
-                                "^com\\.parallels\\.desktop$",
-                                "^com\\.parallels\\.vm$",
-                                "^com\\.parallels\\.desktop\\.console$",
-                                "^com\\.parallels\\.winapp\\."
-                            ],
-                            "type": "frontmost_application_unless"
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "right_shift",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_shift"
-                        }
-                    ],
-                    "to_if_alone": [
-                        {
-                            "key_code": "j",
-                            "modifiers": [
-                                "left_control",
-                                "left_shift"
-                            ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "bundle_identifiers": [
-                                "^org\\.gnu\\.Emacs$",
-                                "^org\\.gnu\\.AquamacsEmacs$",
-                                "^org\\.gnu\\.Aquamacs$",
-                                "^com\\.parallels\\.desktop$",
-                                "^com\\.parallels\\.vm$",
-                                "^com\\.parallels\\.desktop\\.console$",
-                                "^com\\.parallels\\.winapp\\."
-                            ],
-                            "type": "frontmost_application_unless"
                         }
                     ]
                 }
