@@ -1,0 +1,31 @@
+{
+    "title": "Spacebar to Shift",
+    "rules": [
+        {
+            "description": "Spacebar を Shift Modifier にする",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "spacebar"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
